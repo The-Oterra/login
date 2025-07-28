@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="img/Favicon-Icon-01.png" type="image/png">
+    <link rel="stylesheet" href="css/sweetalert2.min.css" sizes="16x16" />
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +18,7 @@
         }
 
         body {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='26' fill='none' viewBox='0 0 24 26'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.69 2.69a2.357 2.357 0 0 1 2.495-.54L21.47 8.632a2.357 2.357 0 0 1-.255 4.494l-7.271 1.818-1.818 7.27a2.357 2.357 0 0 1-4.494.256L1.15 5.185a2.357 2.357 0 0 1 .54-2.495Z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.633 3.622A.786.786 0 0 0 2.62 4.633L9.103 21.92a.786.786 0 0 0 1.498-.086l2.047-8.185 8.185-2.046a.785.785 0 0 0 .086-1.498L3.633 3.622Z' fill='%23010101'/%3E%3C/svg%3E"), auto;
             position: relative;
             margin: 0;
             min-height: 100vh;
@@ -85,6 +88,7 @@
         }
 
         input[type="checkbox"] {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='26' fill='none' viewBox='0 0 24 26'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.69 2.69a2.357 2.357 0 0 1 2.495-.54L21.47 8.632a2.357 2.357 0 0 1-.255 4.494l-7.271 1.818-1.818 7.27a2.357 2.357 0 0 1-4.494.256L1.15 5.185a2.357 2.357 0 0 1 .54-2.495Z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.633 3.622A.786.786 0 0 0 2.62 4.633L9.103 21.92a.786.786 0 0 0 1.498-.086l2.047-8.185 8.185-2.046a.785.785 0 0 0 .086-1.498L3.633 3.622Z' fill='%23010101'/%3E%3C/svg%3E"), auto;
             transform: scale(1.75);
             margin-right: 15px;
             margin-left: 5px;
@@ -100,6 +104,7 @@
         }
 
         .terms-link {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='26' fill='none' viewBox='0 0 24 26'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.69 2.69a2.357 2.357 0 0 1 2.495-.54L21.47 8.632a2.357 2.357 0 0 1-.255 4.494l-7.271 1.818-1.818 7.27a2.357 2.357 0 0 1-4.494.256L1.15 5.185a2.357 2.357 0 0 1 .54-2.495Z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.633 3.622A.786.786 0 0 0 2.62 4.633L9.103 21.92a.786.786 0 0 0 1.498-.086l2.047-8.185 8.185-2.046a.785.785 0 0 0 .086-1.498L3.633 3.622Z' fill='%23010101'/%3E%3C/svg%3E"), auto;
             color: Red;
             font-size: 15px;
             text-decoration: none;
@@ -164,7 +169,8 @@
             <input name="username" type="text" placeholder="Room No" required />
             <input name="password" type="password" placeholder="Password" required />
 
-            <label>
+            <label
+                style="cursor: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='26' fill='none' viewBox='0 0 24 26'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.69 2.69a2.357 2.357 0 0 1 2.495-.54L21.47 8.632a2.357 2.357 0 0 1-.255 4.494l-7.271 1.818-1.818 7.27a2.357 2.357 0 0 1-4.494.256L1.15 5.185a2.357 2.357 0 0 1 .54-2.495Z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.633 3.622A.786.786 0 0 0 2.62 4.633L9.103 21.92a.786.786 0 0 0 1.498-.086l2.047-8.185 8.185-2.046a.785.785 0 0 0 .086-1.498L3.633 3.622Z' fill='%23010101'/%3E%3C/svg%3E&quot;),auto;">
                 <input type="checkbox" required name="terms">
                 I Agree to the&nbsp;<a class="terms-link" href="Guestpolicy.html">Terms and Conditions</a>
             </label>
@@ -175,28 +181,56 @@
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
 
                 <!-- Left-aligned link with JS popup -->
-                <a href="#" onclick="showTroubleLogin()"
+                <a href="#" onclick="showTroubleLogin(event)"
                     style="text-decoration: underline; color: white; cursor: pointer;">
                     Trouble Logging in?
                 </a>
 
                 <!-- Right-aligned link with JS popup -->
-                <a href="#" onclick="showForgotPassword()"
+                <a href="#" onclick="showForgotPassword(event)"
                     style="text-decoration: underline; color: white; cursor: pointer;">
                     Forgot password?
                 </a>
 
             </div>
 
+            <script src="css/sweetalert2.min.js"></script>
+
             <script>
-                function showTroubleLogin() {
-                    alert("Possible solutions:\n\n1. Check if your Caps Lock is on.\n2. Make sure your email/username is correct.\n3. Try clearing your browser cache.\n4. If you still can't log in, contact support.");
+                // Prevent default link action (page jump) by passing event and calling preventDefault()
+                function showTroubleLogin(event) {
+                    event.preventDefault();
+                    Swal.fire({
+                        // title: "Oops...",
+                        imageUrl: "img/Wifi_Issue_Assist.PNG",
+                        // html: `
+                        //     Possible solutions:<br><br>
+                        //     1. Check if your Caps Lock is on.<br>
+                        //     2. Make sure your email/username is correct.<br>
+                        //     3. Try clearing your browser cache.<br>
+                        //     4. If you still can't log in, contact support.
+                        //     `,
+                        footer: '<a href="#">For Further Assitance, <br>Contact +91 080 3003 0303</a>'
+                    });
                 }
 
-                function showForgotPassword() {
-                    alert("To reset your password:\n\n1. Go to the password reset page.\n2. Enter your registered email.\n3. Follow the instructions sent to your email.\n\nStill need help? Contact support.");
+                function showForgotPassword(event) {
+                    Swal.fire({
+                        icon: "info",
+                        title: "Oops...",
+                        text: "Something went wrong!",
+                        html: `
+                            To reset your password:<br><br>
+                            1. Go to the password reset page.<br>
+                            2. Enter your registered email.<br>
+                            3. Follow the instructions sent to your email.<br><br>
+                            Still need help? Contact support.
+                            `,
+                        footer: '<a href="#">Why do I have this issue?</a>'
+                    });
                 }
             </script>
+
 
 
 
