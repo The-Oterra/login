@@ -174,19 +174,30 @@
             <!-- Flex container for both links -->
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
 
-                <!-- Left-aligned link -->
-                <a href="Troubleshoot.html" target="_blank"
+                <!-- Left-aligned link with JS popup -->
+                <a href="#" onclick="showTroubleLogin()"
                     style="text-decoration: underline; color: white; cursor: pointer;">
                     Trouble Logging in?
                 </a>
 
-                <!-- Right-aligned link -->
-                <a href="ForgotPassword.html" target="_blank"
+                <!-- Right-aligned link with JS popup -->
+                <a href="#" onclick="showForgotPassword()"
                     style="text-decoration: underline; color: white; cursor: pointer;">
                     Forgot password?
                 </a>
 
             </div>
+
+            <script>
+                function showTroubleLogin() {
+                    alert("Possible solutions:\n\n1. Check if your Caps Lock is on.\n2. Make sure your email/username is correct.\n3. Try clearing your browser cache.\n4. If you still can't log in, contact support.");
+                }
+
+                function showForgotPassword() {
+                    alert("To reset your password:\n\n1. Go to the password reset page.\n2. Enter your registered email.\n3. Follow the instructions sent to your email.\n\nStill need help? Contact support.");
+                }
+            </script>
+
 
 
         </form>
